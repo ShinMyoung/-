@@ -22,18 +22,18 @@ namespace 용사의_나날
             Console.WriteLine("당신의 이름은 무엇인가요?");
             string userName = Console.ReadLine();
 
-            bool isReset = true;
-            int power = 0, hp = 0;
-            //유저의 이름, 힘, 체력 랜덤으로 할당하기
-            while (isReset)
-            {
-                power = random.Next(1, 9);
-                hp = random.Next(4, 9);
-                Console.Write($"{userName}님은 공격력:{power},체력:{hp}입니다.");
+            //bool isReset = true;
+            //int power = 0, hp = 0;
+            ////유저의 이름, 힘, 체력 랜덤으로 할당하기
+            //while (isReset)
+            //{
+            //    power = random.Next(1, 9);
+            //    hp = random.Next(4, 9);
+            //    Console.Write($"{userName}님은 공격력:{power},체력:{hp}입니다.");
                
-            }
+            //}
 
-            Player player = new Player(userName, power, hp);
+            Player player = new Player(userName);
             return player;
         }
 
@@ -41,17 +41,5 @@ namespace 용사의_나날
 
     }
 
-    internal class Player
-    {
-        public Player(string userName, int power, int hp)
-        {
-            UserName = userName;
-            Power = power;
-            Hp = hp;
-        }
-
-        public string UserName { get; }
-        public int Power { get; }
-        public int Hp { get; }
-    }
+   
 }
